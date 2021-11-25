@@ -1,0 +1,25 @@
+
+
+
+
+
+   footer {
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    background-color: #0F121D;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Athiti', sans-serif;
+    line-height: 1.80857;
+}
+
+
+
+
+   .logo-image{
+    width: 75px;
+    height: 66px;
+    overflow: hidden;
+    margin-top: -6px;
+   }
