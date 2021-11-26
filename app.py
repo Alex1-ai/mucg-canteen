@@ -113,15 +113,15 @@ def deliveryForRoyalForm():
             # to add the data
             db.session.add(data)
             db.session.commit()
-            print("succssful")
+            databaseMessage="succssful"
         except:
-            flash(f"please something went wrong try again!! (Hint: Check Your Internet Connection)", category="danger")
-            return redirect(url_for('deliveryForRoyal'))
+            databaseMessage ="failed"
+            
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
         admin = "alexanderemmanuel1719@gmail.com"
-        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nhostel/Office NUm: {pack} \n Food: {food} \n Restaurant: {restaurant}"
+        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nhostel/Office NUm: {pack} \n Food: {food} \n Restaurant: {restaurant}\n database: {databaseMessage}"
 
         try:
 
@@ -200,17 +200,16 @@ def deliveryForKiberbForm():
             # to add the data
             db.session.add(data)
             db.session.commit()
-            print("successful")
+            databaseMessage="succssful"
         except:
-            flash(f"please something went wrong try again!! (Hint: Check Your Internet Connection)", category="danger")
-            return redirect(url_for('deliveryForKiberb'))
+            databaseMessage="failed"
 
 
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
         admin = "alexanderemmanuel1719@gmail.com"
-        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}"
+        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database:{databaseMessage}"
         try:
 
             # initialize the server and the gate wway
@@ -284,15 +283,14 @@ def deliveryForManoviaForm():
             # to add the data
             db.session.add(data)
             db.session.commit()
-            print("Sucessful")
+            databaseMessage="successful"
         except:
-            flash(f"please something went wrong try again!! (Hint: Check Your Internet Connection)", category="danger")
-            return redirect(url_for('deliveryForManovia'))
+            databaseMessage="failed"
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
         admin = "alexanderemmanuel1719@gmail.com"
-        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}"
+        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database: {databaseMessage}"
 
         try:
 
@@ -371,15 +369,15 @@ def deliveryForMartharusForm():
             # to add the data
             db.session.add(data)
             db.session.commit()
-            print("Successful")
+            databaseMessage="Successful"
         except:
-            flash(f"please something went wrong try again!! (Hint: Check Your Internet Connection)", category="danger")
-            return redirect(url_for('deliveryForMartharus'))
+            databaseMessage="Failed"
+
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
         admin = "alexanderemmanuel1719@gmail.com"
-        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}"
+        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database: {databaseMessage}"
 
         try:
 
@@ -459,17 +457,17 @@ def deliveryForStellaForm():
             # to add the data
             db.session.add(data)
             db.session.commit()
-            print("successful")
+            databaseMessage="successful"
         except:
-            flash(f"please something went wrong try again!! (Hint: Check Your Internet Connection)", category="danger")
-            return redirect(url_for('deliveryForStella'))
+            databaseMessage="Failed"
+
 
 
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
         admin = "alexanderemmanuel1719@gmail.com"
-        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location}\nhostel/Office: {hostelorOffice}\nPack: {pack}\nFood:{food} \nRestaurant:{restaurant}"
+        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location}\nhostel/Office: {hostelorOffice}\nPack: {pack}\nFood:{food} \nRestaurant:{restaurant}\n database: {databaseMessage}"
 
         try:
 
