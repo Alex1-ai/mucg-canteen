@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # seeting the secret key
 app.secret_key = 'random string'
-ENV = "dev"
+ENV = "prod"
 
 if ENV  == "dev":
     app.debug= True
