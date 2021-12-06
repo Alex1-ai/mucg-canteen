@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # seeting the secret key
 app.secret_key = 'random string'
-ENV = "prod"
+ENV = "dev"
 
 if ENV  == "dev":
     app.debug= True
@@ -120,30 +120,30 @@ def deliveryForRoyalForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admin = "alexanderemmanuel1719@gmail.com"
+        admins = ["alexanderemmanuel1719@gmail.com", "samuel.oep3@gmail.com","Usmanfawaz68@gmail.com","sheddydavid@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nhostel/Office NUm: {pack} \n Food: {food} \n Restaurant: {restaurant}\n database: {databaseMessage}"
-
+        
         try:
+            for admin in admins:
 
-            # initialize the server and the gate wway
-            server = smtplib.SMTP('smtp.gmail.com', 587)
+                # initialize the server and the gate wway
+                server = smtplib.SMTP('smtp.gmail.com', 587)
 
-            # telling the server it is secure
-            server.starttls()
+                # telling the server it is secure
+                server.starttls()
 
-            # login in , which will need your email and your password
-            server.login("websitewebsite944@gmail.com", "1236Jesus")
-            # trying to send mail to the person in charge of taking it to book
-            # setting the email subject or title
-            emailSender = EmailMessage()
-            # the person sending the message
-            emailSender['From'] = "websitewebsite944@gmail.com"
-            # to whom you want to send the message to
-            emailSender["To"] = admin
-            emailSender["Subject"] = "MethodistRestaurant Delivery Service"
+                # login in , which will need your email and your password
+                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                # setting the email subject or title
+                emailSender = EmailMessage()
+                # the person sending the message
+                emailSender['From'] = "websitewebsite944@gmail.com"
+                # to whom you want to send the message to
+                emailSender["To"] = admin
+                emailSender["Subject"] = "MethodistRestaurant Delivery Service"
 
-            emailSender.set_content(customerMessage)
-            server.send_message(emailSender)
+                emailSender.set_content(customerMessage)
+                server.send_message(emailSender)
 
             """ server = smtplib.SMTP("smtp.gmail.com", 587)
             server.starttls()"""
@@ -208,29 +208,30 @@ def deliveryForKiberbForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admin = "alexanderemmanuel1719@gmail.com"
+        admins = ["alexanderemmanuel1719@gmail.com", "samuel.oep3@gmail.com","Usmanfawaz68@gmail.com","sheddydavid@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database:{databaseMessage}"
         try:
+            
+            for admin in admins:
+                # initialize the server and the gate wway
+                server = smtplib.SMTP('smtp.gmail.com', 587)
 
-            # initialize the server and the gate wway
-            server = smtplib.SMTP('smtp.gmail.com', 587)
+                # telling the server it is secure
+                server.starttls()
 
-            # telling the server it is secure
-            server.starttls()
+                # login in , which will need your email and your password
+                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                # trying to send mail to the person in charge of taking it to book
+                # setting the email subject or title
+                emailSender = EmailMessage()
+                # the person sending the message
+                emailSender['From'] = "websitewebsite944@gmail.com"
+                # to whom you want to send the message to
+                emailSender["To"] = admin
+                emailSender["Subject"] = "MethodistRestaurant Delivery Service"
 
-            # login in , which will need your email and your password
-            server.login("websitewebsite944@gmail.com", "1236Jesus")
-            # trying to send mail to the person in charge of taking it to book
-            # setting the email subject or title
-            emailSender = EmailMessage()
-            # the person sending the message
-            emailSender['From'] = "websitewebsite944@gmail.com"
-            # to whom you want to send the message to
-            emailSender["To"] = admin
-            emailSender["Subject"] = "MethodistRestaurant Delivery Service"
-
-            emailSender.set_content(customerMessage)
-            server.send_message(emailSender)
+                emailSender.set_content(customerMessage)
+                server.send_message(emailSender)
 
             """ server = smtplib.SMTP("smtp.gmail.com", 587)
             server.starttls()"""
@@ -289,30 +290,31 @@ def deliveryForManoviaForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admin = "alexanderemmanuel1719@gmail.com"
+        admins = ["alexanderemmanuel1719@gmail.com", "samuel.oep3@gmail.com","Usmanfawaz68@gmail.com","sheddydavid@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database: {databaseMessage}"
 
         try:
+            
+            for admin in admins:
+                # initialize the server and the gate wway
+                server = smtplib.SMTP('smtp.gmail.com', 587)
 
-            # initialize the server and the gate wway
-            server = smtplib.SMTP('smtp.gmail.com', 587)
+                # telling the server it is secure
+                server.starttls()
 
-            # telling the server it is secure
-            server.starttls()
+                # login in , which will need your email and your password
+                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                # trying to send mail to the person in charge of taking it to book
+                # setting the email subject or title
+                emailSender = EmailMessage()
+                # the person sending the message
+                emailSender['From'] = "websitewebsite944@gmail.com"
+                # to whom you want to send the message to
+                emailSender["To"] = admin
+                emailSender["Subject"] = "MethodistRestaurant Delivery Service"
 
-            # login in , which will need your email and your password
-            server.login("websitewebsite944@gmail.com", "1236Jesus")
-            # trying to send mail to the person in charge of taking it to book
-            # setting the email subject or title
-            emailSender = EmailMessage()
-            # the person sending the message
-            emailSender['From'] = "websitewebsite944@gmail.com"
-            # to whom you want to send the message to
-            emailSender["To"] = admin
-            emailSender["Subject"] = "MethodistRestaurant Delivery Service"
-
-            emailSender.set_content(customerMessage)
-            server.send_message(emailSender)
+                emailSender.set_content(customerMessage)
+                server.send_message(emailSender)
 
             """ server = smtplib.SMTP("smtp.gmail.com", 587)
             server.starttls()"""
@@ -376,30 +378,30 @@ def deliveryForMartharusForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admin = "alexanderemmanuel1719@gmail.com"
+        admins = ["alexanderemmanuel1719@gmail.com", "samuel.oep3@gmail.com","Usmanfawaz68@gmail.com","sheddydavid@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database: {databaseMessage}"
 
         try:
+            for admin in admins:
+                # initialize the server and the gate wway
+                server = smtplib.SMTP('smtp.gmail.com', 587)
 
-            # initialize the server and the gate wway
-            server = smtplib.SMTP('smtp.gmail.com', 587)
+                # telling the server it is secure
+                server.starttls()
 
-            # telling the server it is secure
-            server.starttls()
+                # login in , which will need your email and your password
+                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                # trying to send mail to the person in charge of taking it to book
+                # setting the email subject or title
+                emailSender = EmailMessage()
+                # the person sending the message
+                emailSender['From'] = "websitewebsite944@gmail.com"
+                # to whom you want to send the message to
+                emailSender["To"] = admin
+                emailSender["Subject"] = "MethodistRestaurant Delivery Service"
 
-            # login in , which will need your email and your password
-            server.login("websitewebsite944@gmail.com", "1236Jesus")
-            # trying to send mail to the person in charge of taking it to book
-            # setting the email subject or title
-            emailSender = EmailMessage()
-            # the person sending the message
-            emailSender['From'] = "websitewebsite944@gmail.com"
-            # to whom you want to send the message to
-            emailSender["To"] = admin
-            emailSender["Subject"] = "MethodistRestaurant Delivery Service"
-
-            emailSender.set_content(customerMessage)
-            server.send_message(emailSender)
+                emailSender.set_content(customerMessage)
+                server.send_message(emailSender)
 
 
             """ server = smtplib.SMTP("smtp.gmail.com", 587)
@@ -466,30 +468,31 @@ def deliveryForStellaForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admin = "alexanderemmanuel1719@gmail.com"
+        admins = ["alexanderemmanuel1719@gmail.com", "samuel.oep3@gmail.com","Usmanfawaz68@gmail.com","sheddydavid@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location}\nhostel/Office: {hostelorOffice}\nPack: {pack}\nFood:{food} \nRestaurant:{restaurant}\n database: {databaseMessage}"
 
         try:
+            for admin in admins:
 
-            # initialize the server and the gate wway
-            server = smtplib.SMTP('smtp.gmail.com', 587)
+                # initialize the server and the gate wway
+                server = smtplib.SMTP('smtp.gmail.com', 587)
 
-            # telling the server it is secure
-            server.starttls()
+                # telling the server it is secure
+                server.starttls()
 
-            # login in , which will need your email and your password
-            server.login("websitewebsite944@gmail.com", "1236Jesus")
-            # trying to send mail to the person in charge of taking it to book
-            # setting the email subject or title
-            emailSender = EmailMessage()
-            # the person sending the message
-            emailSender['From'] = "websitewebsite944@gmail.com"
-            # to whom you want to send the message to
-            emailSender["To"] = admin
-            emailSender["Subject"] = "MethodistRestaurant Delivery Service"
+                # login in , which will need your email and your password
+                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                # trying to send mail to the person in charge of taking it to book
+                # setting the email subject or title
+                emailSender = EmailMessage()
+                # the person sending the message
+                emailSender['From'] = "websitewebsite944@gmail.com"
+                # to whom you want to send the message to
+                emailSender["To"] = admin
+                emailSender["Subject"] = "MethodistRestaurant Delivery Service"
 
-            emailSender.set_content(customerMessage)
-            server.send_message(emailSender)
+                emailSender.set_content(customerMessage)
+                server.send_message(emailSender)
 
             """ server = smtplib.SMTP("smtp.gmail.com", 587)
             server.starttls()"""
