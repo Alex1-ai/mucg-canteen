@@ -149,7 +149,7 @@ def deliveryForRoyalForm():
             server.starttls()"""
 
             # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Your {food} order was sucessful! Your package would be delivered in less than 10 minutes. Thanks ",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and 2 cedes for management of the website. Thanks ",
                   category="success")
             return redirect(url_for('home'))
         except:
@@ -237,7 +237,7 @@ def deliveryForKiberbForm():
             server.starttls()"""
 
             # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Your {food} order was sucessful! Your package would be delivered in less than 10 minutes. Thanks ",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and addition of 2 cedes for management of the website. Thanks ",
                   category="success")
             return redirect(url_for('home'))
         except:
@@ -320,7 +320,7 @@ def deliveryForManoviaForm():
             server.starttls()"""
 
             # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Your {food} order was sucessful! Your package would be delivered in less than 10 minutes. Thanks ",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and 2 cedes for management of the website. Thanks ",
                   category="success")
             return redirect(url_for('home'))
         except:
@@ -408,7 +408,7 @@ def deliveryForMartharusForm():
             server.starttls()"""
 
             #server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Your {food} order was sucessful! Your package would be delivered in less than 10 minutes. Thanks ",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and addition of 2 cedes for management of the website. Thanks ",
                   category="success")
             return redirect(url_for('home'))
         except:
@@ -498,7 +498,7 @@ def deliveryForStellaForm():
             server.starttls()"""
 
             # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Your {food} order was sucessful! Your package would be delivered in less than 10 minutes. Thanks ",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and addition of 2 cedes for management of the website. Thanks ",
                   category="success")
             return redirect(url_for('home'))
         except:
