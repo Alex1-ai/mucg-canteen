@@ -149,7 +149,7 @@ def deliveryForRoyalForm():
             server.starttls()"""
 
             # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and 1 cedes for management of the website. Thanks ",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes .  free donation for the management of the website is welcome",
                   category="success")
             return redirect(url_for('home'))
         except:
@@ -237,7 +237,7 @@ def deliveryForKiberbForm():
             server.starttls()"""
 
             # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and addition of 1 cedes for management of the website. Thanks ",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes. free donation for the management of the website is welcome",
                   category="success")
             return redirect(url_for('home'))
         except:
