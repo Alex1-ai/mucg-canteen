@@ -120,7 +120,7 @@ def deliveryForRoyalForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com", "samuel.oep3@gmail.com","Usmanfawaz68@gmail.com","sheddydavid@gmail.com"]
+        admins = ["alexanderemmanuel1719@gmail.com","sheddydavid@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nhostel/Office NUm: {pack} \n Food: {food} \n Restaurant: {restaurant}\n database: {databaseMessage}"
         
         try:
@@ -149,7 +149,7 @@ def deliveryForRoyalForm():
             server.starttls()"""
 
             # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes .  free donation for the management of the website is welcome",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes .  free donation for the management of the website is welcomed",
                   category="success")
             return redirect(url_for('home'))
         except:
@@ -208,7 +208,7 @@ def deliveryForKiberbForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com", "samuel.oep3@gmail.com","Usmanfawaz68@gmail.com","sheddydavid@gmail.com"]
+        admins = ["alexanderemmanuel1719@gmail.com","sheddydavid@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database:{databaseMessage}"
         try:
             
@@ -237,7 +237,7 @@ def deliveryForKiberbForm():
             server.starttls()"""
 
             # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes. free donation for the management of the website is welcome",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes. free donation for the management of the website is welcomed",
                   category="success")
             return redirect(url_for('home'))
         except:
@@ -290,7 +290,7 @@ def deliveryForManoviaForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com", "samuel.oep3@gmail.com","Usmanfawaz68@gmail.com","sheddydavid@gmail.com"]
+        admins = ["alexanderemmanuel1719@gmail.com", "sheddydavid@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database: {databaseMessage}"
 
         try:
@@ -320,7 +320,7 @@ def deliveryForManoviaForm():
             server.starttls()"""
 
             # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and 1 cedes for management of the website. Thanks ",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and free donation for the management of the website is welcomed",
                   category="success")
             return redirect(url_for('home'))
         except:
@@ -378,7 +378,7 @@ def deliveryForMartharusForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com", "samuel.oep3@gmail.com","Usmanfawaz68@gmail.com","sheddydavid@gmail.com"]
+        admins = ["alexanderemmanuel1719@gmail.com","sheddydavid@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database: {databaseMessage}"
 
         try:
@@ -408,7 +408,7 @@ def deliveryForMartharusForm():
             server.starttls()"""
 
             #server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and addition of 1 cedes for management of the website. Thanks ",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and free donation for the management of the website is welcomed",
                   category="success")
             return redirect(url_for('home'))
         except:
@@ -468,7 +468,7 @@ def deliveryForStellaForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com", "samuel.oep3@gmail.com","Usmanfawaz68@gmail.com","sheddydavid@gmail.com"]
+        admins = ["alexanderemmanuel1719@gmail.com", "sheddydavid@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location}\nhostel/Office: {hostelorOffice}\nPack: {pack}\nFood:{food} \nRestaurant:{restaurant}\n database: {databaseMessage}"
 
         try:
@@ -498,7 +498,7 @@ def deliveryForStellaForm():
             server.starttls()"""
 
             # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and addition of 1 cedes for management of the website. Thanks ",
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and free donation for the management of the website is welcomed ",
                   category="success")
             return redirect(url_for('home'))
         except:
