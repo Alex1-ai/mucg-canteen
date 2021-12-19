@@ -1,0 +1,162 @@
+{% extends "background.html" %}
+
+{% block title %}
+Mucg-delivery
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">Methodist  Dansoman Campus Delivery Service</h1>
+    <p id="description" class="description text-center">
+      Thank you for using our services, we are ready to serve you more.
+    </p>
+  </header>
+  <form  action="/deliveryForStellaForm" method="post">
+    <div class="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+
+          <div class="form-group">
+      <p>Food</p>
+      <select id="food" name="food" class="form-control" required>
+        <option disabled selected value>Select your meal</option>
+        <option value="plain-rice(GHc15)">Plain-rice (GHc15)</option>
+        <option value="fried-rice(GHc15)">Fried-rice (GHc15)</option>
+        <option value="jollof-rice(GHc15)">Jollof-rice (GHc15)</option>
+        <option value="Banku & Okra soup(GHc15)">Banku & Okra soup (GHc15)</option>
+        <option value="Banku & Palmnut soup(GHc15)">Banku & Palmnut soup (GHc15)</option>
+        <option value="Banku & Groundnut soup(GHc15)">Banku & Groundnut soup (GHc15)</option>
+          <option value="Banku & Light soup(GHc15)">Banku & Light soup (GHc15)</option>
+          <option value="Fufu & Okra soup(GHc15)">Fufu & Okra soup (GHc15)</option>
+          <option value="Fufu & Palmnut soup(GHc15)">Fufu & Palmnut soup (GHc15)</option>
+          <option value="Fufu & Groundnut soup(GHc15)">Fufu & Groundnut soup (GHc15)</option>
+          <option value="Fufu & Light soup(GHc15)">Fufu & Light soup (GHc15)</option>
+          <option value="Plaintain & parava sauce(GHc20)">Plaintain & parava sauce (GHc20)</option>
+
+
+      </select>
+    </div>
+
+
+      <!-- drop down for location -->
+          <div class="form-group">
+      <p>Location</p>
+      <select id="location" name="location" class="form-control" required>
+        <option disabled selected value>Select your Location</option>
+        <option value="Alpha-Royal">Alpha-Royal</option>
+        <option value="Center-Link">Center-Link</option>
+          <option value="Office">Office</option>
+          <option value="Class-room">Class-room</option>
+          </select>
+          </div>
+
+    <div class="form-group">
+      <label id="hostelorOfficeNum" for="hostelorOfficeNum">Hostel/Office number</label>
+      <input
+        type="text"
+        name="hostelorOfficeNum"
+        class="form-control"
+        placeholder="Enter your hostel, Class-room or office number"
+        required
+      />
+    </div>
+
+
+    <div class="form-group">
+      <label id="number-label" for="number"
+        >Package<span class="clue">(how many pack)</span></label>
+      <input
+        type="number"
+        name="number"
+        id="number"
+        min="1"
+        max="50"
+        class="form-control"
+        placeholder="how many pack"
+      />
+    </div>
+
+      <div class="form-group">
+      <label id="phoneNumber-Label" for="phoneNumber">Contact(phone-number) </label>
+      <input
+        type="contact"
+        name="phoneNumber"
+        id="phoneNumber"
+        class="form-control"
+        placeholder="Enter your Phone-Number"
+        required
+      />
+    </div>
+
+
+
+
+
+
+
+         <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your Email"
+        required
+      />
+    </div>
+
+
+
+
+    <div class="form-group">
+     <div class="submit-button text-center">
+      <button type="submit" id="submit" class="btn btn-primary" style="text-align:center">
+        Submit
+      </button>
+     </div>
+    </div>
+  </form>
+</div>
+</body>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+body {
+
+  background-image: url('static/images/all-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color:#EDFAFF;
+}
+
+
+</style>
+
+
+{% endblock %}

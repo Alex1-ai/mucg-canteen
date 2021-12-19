@@ -1,0 +1,79 @@
+{% extends "background.html" %}
+
+{% block title %}
+Mucg-Enquiry
+{% endblock %}
+
+{% block content %}
+
+	<!-- End header -->
+	
+
+	<!-- Start Contact -->
+	<div class="map-full"></div>
+	<div class="contact-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Contact</h2>
+						<p>Send in your enquiry and we would as early as possible get back to you.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<form action="\contactForm" method="post">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+									<div class="help-block with-errors"></div>
+								</div>                                 
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="email" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+									<div class="help-block with-errors"></div>
+								</div> 
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Your Phone Number" required data-error="Please enter your phone number">
+
+									<div class="help-block with-errors"></div>
+								</div> 
+							</div>
+							<div class="col-md-12">
+								<div class="form-group"> 
+									<textarea class="form-control" id="message" name="message" placeholder="Your Message" rows="4" data-error="Write your message" required></textarea>
+									<div class="help-block with-errors"></div>
+								</div>
+								<div class="submit-button text-center">
+									<button class="btn btn-primary"  type="submit">Send Message</button>
+									<div id="msgSubmit" class="h3 text-center hidden"></div> 
+
+								</div>
+							</div>
+						</div>            
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+     <br>
+	<!-- End Contact -->
+	
+
+	<!-- End Contact info -->
+<style>
+body {
+
+  background-image: url('static/images/gallery-img-01.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color:#EDFAFF;
+}
+</style>
+{% endblock %}

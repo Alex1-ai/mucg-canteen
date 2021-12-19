@@ -1,0 +1,41 @@
+{% extends "background.html" %}
+
+{% block title %}
+Mucg-Canteen
+{% endblock %}
+
+
+{% block content %}
+<div id="image-head" class="image-head">
+    <h1>Welcome to Methodist University Canteen</h1>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-" style="color:#6088FF">
+        <div class="col-md-4 p-lg-4 mx-auto my-4">
+            <h2 class="display-4 font-weight-normal">Delicious Meal</h2>
+            <p class="lead font-weight-normal" style="color:white">Start ordering your Suya and Food package from the
+                comfort of your hostel by clicking the link below</p>
+            <a class="btn btn-primary" href="{{ url_for('menu') }}">Place Your Order</a>
+
+        </div>
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+
+    </div>
+</div>
+
+
+
+<style>
+
+
+body {
+
+  background-image: url('static/images/jollofrice5.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  color:#EDFAFF;
+}
+
+
+</style>
+{% endblock %}
