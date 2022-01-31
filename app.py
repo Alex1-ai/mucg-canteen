@@ -121,7 +121,7 @@ def deliveryForRoyalForm():
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
         admins = ["alexanderemmanuel1719@gmail.com","sheddydavid@gmail.com"]
-        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nhostel/Office NUm: {pack} \n Food: {food} \n Restaurant: {restaurant}\n database: {databaseMessage}"
+        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \n pack: {pack} \n Food: {food} \n Restaurant: {restaurant}\n database: {databaseMessage}"
         
         try:
             for admin in admins:
@@ -511,6 +511,96 @@ def deliveryForStellaForm():
         flash("Please place your order first? ", category="danger")
         return redirect(url_for('menu'))
 
+
+
+
+#  WORKING ON SUPERGHETTI 
+
+@app.route('/deliveryForAnointed', methods = ['POST', 'GET'])
+def deliveryForAnointed():
+    #if request.method == 'POST':
+         return render_template("deliveryForAnointed.html")
+    #elif  request.method == 'GET':
+    #    flash("Please place your order first? ", category="danger")
+    #    return redirect(url_for('menu'))
+
+
+@app.route('/deliveryForAnointedForm', methods = ['POST', 'GET'])
+def deliveryForAnointedForm():
+    if request.method == 'POST':
+        name = request.form.get("name")
+        food = request.form.get("food")
+        location= request.form.get("location")
+        hostelorOffice = request.form.get("hostelorOfficeNum")
+        pack = request.form.get("number")
+        phonenumber=request.form.get("phoneNumber")
+        email = request.form.get("email")
+        restaurant = "Anointed Restaurant"
+
+
+        # VALIDATING THE USER INPUT TO SEE IF ALL THE PARIMETER IS BEEN GIVEN
+        if name=="" or  phonenumber =="" or email =="" or pack=="" or hostelorOffice=="" or location=="" or food=="":
+            flash(f"please fill in all the credentials. try again!! ", category="danger")
+            return redirect(url_for('deliveryForAnointed'))
+
+        try:
+            # saving to the database
+            data = Feedback(name, food, location, hostelorOffice, pack, phonenumber, email, restaurant)
+            # to add the data
+            db.session.add(data)
+            db.session.commit()
+            databaseMessage="successful"
+        except:
+            databaseMessage="Failed"
+
+
+
+
+        print(name, food, location, hostelorOffice, pack,phonenumber,email)
+
+        admins = ["alexanderemmanuel1719@gmail.com", "sheddydavid@gmail.com"]
+        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location}\nhostel/Office: {hostelorOffice}\nPack: {pack}\nFood:{food} \nRestaurant:{restaurant}\n database: {databaseMessage}"
+
+        try:
+            for admin in admins:
+
+                # initialize the server and the gate wway
+                server = smtplib.SMTP('smtp.gmail.com', 587)
+
+                # telling the server it is secure
+                server.starttls()
+
+                # login in , which will need your email and your password
+                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                # trying to send mail to the person in charge of taking it to book
+                # setting the email subject or title
+                emailSender = EmailMessage()
+                # the person sending the message
+                emailSender['From'] = "websitewebsite944@gmail.com"
+                # to whom you want to send the message to
+                emailSender["To"] = admin
+                emailSender["Subject"] = "MethodistRestaurant Delivery Service"
+
+                emailSender.set_content(customerMessage)
+                server.send_message(emailSender)
+
+            """ server = smtplib.SMTP("smtp.gmail.com", 587)
+            server.starttls()"""
+
+            # server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
+            flash(f"Thanks {name}, Your {food} order was sucessful! Your package would be delivered in less than 10 minutes and free donation for the management of the website is welcomed ",
+                  category="success")
+            return redirect(url_for('home'))
+        except:
+            flash(f"please something went wrong try again!! (Hint: Check Your Internet Connection)", category="danger")
+            return redirect(url_for('deliveryForStella'))
+
+
+    #return redirect(url_for('home'))
+     
+    elif  request.method == 'GET':
+        flash("Please place your order first? ", category="danger")
+        return redirect(url_for('menu'))
 
 
 
