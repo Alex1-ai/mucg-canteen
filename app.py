@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 # seeting the secret key
 app.secret_key = 'random string'
-ENV = "prod"
+ENV = "dev"
 
 if ENV  == "dev":
     app.debug= True
@@ -101,6 +101,7 @@ def deliveryForRoyalForm():
         pack = request.form.get("number")
         phonenumber=request.form.get("phoneNumber")
         email = request.form.get("email")
+        userPreference = request.form.get("usersPreference")
         restaurant = "Royal Food Court"
 
         # VALIDATING THE USER INPUT TO SEE IF ALL THE PARIMETER IS BEEN GIVEN
@@ -120,8 +121,8 @@ def deliveryForRoyalForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com","sheddydavid@gmail.com"]
-        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \n pack: {pack} \n Food: {food} \n Restaurant: {restaurant}\n database: {databaseMessage}"
+        admins = ["alexanderemmanuel1719@gmail.com","maxyantwi.ma@gmail.com"]
+        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \n pack: {pack} \n Food: {food}\n userPreference: {userPreference} \n Restaurant: {restaurant}\n database: {databaseMessage}"
         
         try:
             for admin in admins:
@@ -208,7 +209,7 @@ def deliveryForKiberbForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com","sheddydavid@gmail.com"]
+        admins = ["alexanderemmanuel1719@gmail.com","maxyantwi.ma@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database:{databaseMessage}"
         try:
             
@@ -290,7 +291,7 @@ def deliveryForManoviaForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com", "sheddydavid@gmail.com"]
+        admins = ["alexanderemmanuel1719@gmail.com", "maxyantwi.ma@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database: {databaseMessage}"
 
         try:
@@ -358,6 +359,7 @@ def deliveryForMartharusForm():
         pack = request.form.get("number")
         phonenumber=request.form.get("phoneNumber")
         email = request.form.get("email")
+        userPreference = request.form.get("usersPreference")
         restaurant = "Matharus"
 
         # VALIDATING THE USER INPUT TO SEE IF ALL THE PARIMETER IS BEEN GIVEN
@@ -378,8 +380,8 @@ def deliveryForMartharusForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com","sheddydavid@gmail.com"]
-        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food} \nRestaurant: {restaurant}\n database: {databaseMessage}"
+        admins = ["alexanderemmanuel1719@gmail.com","maxyantwi.ma@gmail.com"]
+        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location} \n hostel/Office: {hostelorOffice} \nPack: {pack} \n Food: {food}\n usersPreference: {userPreference} \nRestaurant: {restaurant}\n database: {databaseMessage}"
 
         try:
             for admin in admins:
@@ -468,7 +470,7 @@ def deliveryForStellaForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com", "sheddydavid@gmail.com"]
+        admins = ["alexanderemmanuel1719@gmail.com", "maxyantwi.ma@gmail.com"]
         customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location}\nhostel/Office: {hostelorOffice}\nPack: {pack}\nFood:{food} \nRestaurant:{restaurant}\n database: {databaseMessage}"
 
         try:
@@ -535,6 +537,7 @@ def deliveryForAnointedForm():
         pack = request.form.get("number")
         phonenumber=request.form.get("phoneNumber")
         email = request.form.get("email")
+        userPreference = request.form.get("usersPreference")
         restaurant = "Anointed Restaurant"
 
 
@@ -558,8 +561,8 @@ def deliveryForAnointedForm():
 
         print(name, food, location, hostelorOffice, pack,phonenumber,email)
 
-        admins = ["alexanderemmanuel1719@gmail.com", "sheddydavid@gmail.com"]
-        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location}\nhostel/Office: {hostelorOffice}\nPack: {pack}\nFood:{food} \nRestaurant:{restaurant}\n database: {databaseMessage}"
+        admins = ["alexanderemmanuel1719@gmail.com", "maxyantwi.ma@gmail.com"]
+        customerMessage = f"My name : {name} \n my phone number: {phonenumber} \nmy email: {email} \n location: {location}\nhostel/Office: {hostelorOffice}\nPack: {pack}\nFood:{food} \n userPreference: {userPreference} \nRestaurant:{restaurant}\n database: {databaseMessage}"
 
         try:
             for admin in admins:
@@ -629,39 +632,40 @@ def contactForm():
 
         #flash(f"Thanks {name}, Your enquiry is been processed we would get back to you as soon as possible. Thanks Once again ", category="success")
         print(name,phoneNumber,email, message)
-        admin = "alexanderemmanuel1719@gmail.com"
+        admins = ["alexanderemmanuel1719@gmail.com","maxyantwi.ma@gmail.com"]
         customerMessage = f"My name is {name} \n my phone number: {phoneNumber} \n my email: {email} \n Message: {message} "
         try:
+            for admin in admins:
 
-            # initialize the server and the gate wway
-            server = smtplib.SMTP('smtp.gmail.com', 587)
+                # initialize the server and the gate wway
+                server = smtplib.SMTP('smtp.gmail.com', 587)
 
-            # telling the server it is secure
-            server.starttls()
+                # telling the server it is secure
+                server.starttls()
 
-            # login in , which will need your email and your password
-            server.login("websitewebsite944@gmail.com", "1236Jesus")
-            # trying to send mail to the person in charge of taking it to book
-            # setting the email subject or title
-            emailSender = EmailMessage()
-            # the person sending the message
-            emailSender['From'] = "websitewebsite944@gmail.com"
-            # to whom you want to send the message to
-            emailSender["To"] = admin
-            emailSender["Subject"] = "MethodistRestaurant Enquiry"
+                # login in , which will need your email and your password
+                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                # trying to send mail to the person in charge of taking it to book
+                # setting the email subject or title
+                emailSender = EmailMessage()
+                # the person sending the message
+                emailSender['From'] = "websitewebsite944@gmail.com"
+                # to whom you want to send the message to
+                emailSender["To"] = admin
+                emailSender["Subject"] = "MethodistRestaurant Enquiry"
 
-            emailSender.set_content(customerMessage)
-            server.send_message(emailSender)
+                emailSender.set_content(customerMessage)
+                server.send_message(emailSender)
 
 
-            """ server = smtplib.SMTP("smtp.gmail.com", 587)
-            server.starttls()"""
+                """ server = smtplib.SMTP("smtp.gmail.com", 587)
+                server.starttls()"""
 
-            #server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
-            flash(
-                f"Thanks {name}, Your enquiry is been processed we would get back to you as soon as possible. Thanks Once again ",
-                category="success")
-            return redirect(url_for('home'))
+                #server.sendmail("websitewebsite944@gmail.com", admin, customerMessage)
+                flash(
+                    f"Thanks {name}, Your enquiry is been processed we would get back to you as soon as possible. Thanks Once again ",
+                    category="success")
+                return redirect(url_for('home'))
         except:
             flash(f"please something went wrong try again!! (Hint: Check Your Internet Connection)", category="danger")
             return redirect(url_for('contact'))
