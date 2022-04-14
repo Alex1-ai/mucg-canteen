@@ -8,64 +8,68 @@ Mucg-Canteen
 {% block content %}
 <div id="image-head" class="image-head">
     
-    <div class="container1">
-        <div class="content">
-    <h3>Welcome to Methodist University Canteen</h3>
-    
-        
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-" style="color:#6088FF">
-        <div class="col-md-4 p-lg-4 mx-auto my-4">
-            <h2 class="display-4 font-weight-normal">Delicious Meal</h2>
-            <p class="lead font-weight-normal" style="color:white">Start ordering your Suya and Food package from the
-                comfort of your hostel by clicking the link below</p>
-            <a class="btn btn-primary" href="{{ url_for('menu') }}">Place Your Order</a>
-      
+        <div class="container1">
+            <div class="content">
+                <marquee><h2>We Do Saxophone or Violin Birthday Surprise. Contact Us : 0503168382 or 0238559158 </h2></marquee>
+                <h3>Welcome to Methodist University Canteen</h3>
+
+
+                <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-" style="color:#6088FF">
+                    <div class="col-md-4 p-lg-4 mx-auto my-4">
+                        <h2 class="display-4 font-weight-normal">Delicious Meal</h2>
+                        <p class="lead font-weight-normal" style="color:white">Start ordering your Suya and Food package
+                            from the
+                            comfort of your hostel by clicking the link below</p>
+                        <a class="btn btn-primary" href="{{ url_for('menu') }}">Place Your Order</a>
+
+                    </div>
+                    <div class="product-device box-shadow d-none d-md-block"></div>
+                    <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+                </div>
+            </div>
         </div>
-        <div class="product-device box-shadow d-none d-md-block"></div>
-        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
-    </div>
-    </div>
 </div>
-    </div>
 </div>
 
 
 
 <style>
+    body {
 
+        background-image: url('../static/africanDish.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        box-sizing: "border-box";
+        color: #EDFAFF;
+    }
 
-body {
-
-  background-image: url('../static/africanDish.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  box-sizing : "border-box";
-  color:#EDFAFF;
-}
-
-.container1 {
-    position: relative;
-    text-align: center;
-    color: white;
-  }
-
-  
-
-
-.container1 .content {
-  margin-top: 0px;
-  position: center; /* Position the background text */
-  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 100%; /* Full width */
-  height: 100%;
-  padding: 20px; /* Some padding */
-}
+    .container1 {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
 
 
 
+
+    .container1 .content {
+        margin-top: 0px;
+        position: center;
+        /* Position the background text */
+        bottom: 0;
+        /* At the bottom. Use top:0 to append it to the top */
+        background: rgb(0, 0, 0);
+        /* Fallback color */
+        background: rgba(0, 0, 0, 0.5);
+        /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        /* Grey text */
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        padding: 20px;
+        /* Some padding */
+    }
 </style>
 {% endblock %}
