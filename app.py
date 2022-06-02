@@ -10,9 +10,11 @@ app = Flask(__name__)
 
 # seeting the secret key
 app.secret_key = 'random string'
-ENV = "prod"
+ENV = "env"
+emailPassword = 'crwxkzeflocjcbzg'
+myEmail = 'websitewebsite944@gmail.com'
 
-if ENV  == "dev":
+if ENV  == "prod":
     app.debug= True
     # delvelopment  database setup
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1236@localhost/postgres'
@@ -134,7 +136,7 @@ def deliveryForRoyalForm():
                 server.starttls()
 
                 # login in , which will need your email and your password
-                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                server.login(myEmail, emailPassword)
                 # setting the email subject or title
                 emailSender = EmailMessage()
                 # the person sending the message
@@ -221,7 +223,7 @@ def deliveryForKiberbForm():
                 server.starttls()
 
                 # login in , which will need your email and your password
-                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                server.login(myEmail, emailPassword)
                 # trying to send mail to the person in charge of taking it to book
                 # setting the email subject or title
                 emailSender = EmailMessage()
@@ -304,7 +306,7 @@ def deliveryForManoviaForm():
                 server.starttls()
 
                 # login in , which will need your email and your password
-                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                server.login(myEmail, emailPassword)
                 # trying to send mail to the person in charge of taking it to book
                 # setting the email subject or title
                 emailSender = EmailMessage()
@@ -392,7 +394,7 @@ def deliveryForMartharusForm():
                 server.starttls()
 
                 # login in , which will need your email and your password
-                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                server.login(myEmail, emailPassword)
                 # trying to send mail to the person in charge of taking it to book
                 # setting the email subject or title
                 emailSender = EmailMessage()
@@ -483,7 +485,7 @@ def deliveryForStellaForm():
                 server.starttls()
 
                 # login in , which will need your email and your password
-                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                server.login(myEmail,emailPassword)
                 # trying to send mail to the person in charge of taking it to book
                 # setting the email subject or title
                 emailSender = EmailMessage()
@@ -574,7 +576,7 @@ def deliveryForAnointedForm():
                 server.starttls()
 
                 # login in , which will need your email and your password
-                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                server.login(myEmail, emailPassword)
                 # trying to send mail to the person in charge of taking it to book
                 # setting the email subject or title
                 emailSender = EmailMessage()
@@ -644,7 +646,7 @@ def contactForm():
                 server.starttls()
 
                 # login in , which will need your email and your password
-                server.login("websitewebsite944@gmail.com", "1236Jesus")
+                server.login(myEmail, emailPassword)
                 # trying to send mail to the person in charge of taking it to book
                 # setting the email subject or title
                 emailSender = EmailMessage()
