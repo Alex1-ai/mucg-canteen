@@ -17,7 +17,7 @@ ENV = "prod"
 emailPassword = 'odisiptxicbanldh'
 myEmail = 'websitewebsite944@gmail.com'
 
-if ENV == "prod":
+if ENV != "prod":
     app.debug = True
     # delvelopment  database setup
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1236@localhost/postgres'
